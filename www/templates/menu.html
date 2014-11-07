@@ -1,0 +1,47 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title">Racing</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/app/home">
+        <i class="icon ion-flag"></i>
+          Races
+        </ion-item>
+        <ion-item nav-clear menu-close ng-click="login()">
+          <i class="icon ion-play"></i>
+          Login
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/results">
+          <i class="icon ion-trophy"></i>
+          Results
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/horses">
+          <i class="icon ion-ribbon-a"></i>
+          Horses
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/mybets">
+          <i class="icon ion-cash"></i>
+          My Bets
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/search">
+          <i class="icon ion-gear-b"></i>
+          Settings
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/help">
+          <i class="icon ion-information-circled"></i>
+          Help
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
