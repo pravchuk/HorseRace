@@ -22,7 +22,8 @@
 {
 	padding : 20px;
 	background-color : rgba(204,35,17,0.85);
-}
+ 
+ }
 
 .shaddow{
 	background-color : #fefefe;
@@ -62,4 +63,9 @@ body
 	color : grey;
 	font-family : ubuntu;
 	font-size : 30px;
+}
+
+.white
+{
+	color : white;
 }

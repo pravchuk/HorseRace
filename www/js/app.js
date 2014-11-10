@@ -47,6 +47,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		}
       }
     })
+	.state('app.racecard', {
+      url: "/racecard",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/racecard.html",
+			controller : 'RacecardCtrl'
+		}
+      }
+    })
+	.state('app.resultOpener', {
+      url: "/resultOpener",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/resultOpener.html",
+			controller : 'ResultOpenerCtrl'
+		}
+      }
+    })
 
     .state('app.browse', {
       url: "/browse",

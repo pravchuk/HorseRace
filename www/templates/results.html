@@ -3,12 +3,13 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <div class = "pad-heading card ">		<!--Heading-->
-		<span class = "heading " >Bangalore</span>
-		<span class="put-right date">25-01-1994</span>
+<!-- 	<div id="loading" style ="position:absolute;z-index:1;text-align:center; vertical-align:center; width : 100%;height : 100%; background-color :white;"><img style="max-width:100%;max-height:100%" src="img/loader.gif"/></div>
+ -->    <div class = "pad-heading card " style ="background-color:rgba({{results.color}},0.85)">		<!--Heading-->
+		<span class = "heading " >{{results.place}}<!-- Bangalore --></span>
+		<span class="put-right date">{{results.date}}</span>
 	</div>
 	<ion-slide-box on-slide-changed="slideHasChanged($index)">
-	<ion-slide ng-repeat = "result in results">
+	<ion-slide ng-repeat = "result in results.res">
 	<div class = "card pad-med shaddow" >
 		<span class="semi-heading">{{result.raceName}}</span><!--Race name-->
 		<span class="put-right semi-heading">{{result.raceNo}}</span>
@@ -19,7 +20,7 @@
 			<span class="col col-10 tb-data">{{horse.horseNo}}</span><!--Horse No-->
 			<span class="col col-33 tb-data">{{horse.name}}</span><!--Name Of Horse-->
 			<span class="col col-33 tb-data"><!--Jockey(Trainer)-->
-				{{horse.jockey}}
+				{{horse.jockey}}<br/>
 				<span>({{horse.trainer}})</span>
 			</span>
 			<span class="col tb-data">{{horse.rating}}</span><!--Name Of Horse-->
@@ -41,13 +42,13 @@
 		</div> -->
 		<div class="">
 			
-			<span class="tb-data put-left divCell" style="background-color: rgba(218,165,32,0.6);">Win<br/>Rs.493</span>
-			<span class="tb-data  put-left  divCell" style="background-color: rgba(192,192,192,0.6);";>SHP<br/>Rs.54</span>
-			<span class="tb-data  put-left  divCell"  style="background-color: rgba(205,127,50,0.6);" >Place<br/>Rs.40,Rs.19,Rs.15</span>
-			<span class="tb-data  put-left  divCell">Quinella<br/>Rs.2078</span>
-			<span class="tb-data  put-left  divCell">Forecast<br/>Rs.13960</span>
-			<span class="tb-data  put-left  divCell">Trinalla<br/>Rs.33383 C/o & 14307</span>
-			<span class="tb-data  put-left  divCell">Exacta<br/>Rs.98339 & 21072</span>
+			<span class="tb-data put-left divCell" style="background-color: rgba(218,165,32,0.6);">Win<br/>{{result.win}}<!-- Rs.493 --></span>
+			<span class="tb-data  put-left  divCell" style="background-color: rgba(192,192,192,0.6);";>SHP<br/>{{result.shp}}<!-- Rs.54 --></span>
+			<span class="tb-data  put-left  divCell"  style="background-color: rgba(205,127,50,0.6);" >Place<br/>{{result.plc}}<!-- Rs.40,Rs.19,Rs.15 --></span>
+			<span class="tb-data  put-left  divCell">Quinella<br/>{{result.qui}}<!-- Rs.2078 --></span>
+			<span class="tb-data  put-left  divCell">Forecast<br/>{{result.for}}<!-- Rs.13960 --></span>
+			<span class="tb-data  put-left  divCell">Trinalla<br/>{{result.tri}}<!-- Rs.33383 C/o & 14307 --></span>
+			<span class="tb-data  put-left  divCell">Exacta<br/>{{result.ext}}<!-- Rs.98339 & 21072 --></span>
 			<!--Rs.493 Rs.54 Rs.40, Rs.19, Rs.15 Rs.2078 Rs.13960 Rs.33383 C/o & 14307 Rs.98339 & 21072-->
 		</div>
 		</ion-slide>
