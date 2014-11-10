@@ -47,5 +47,35 @@ angular.module('starter.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
+.controller('ResultsCtrl', function($scope) {
+	var dummyRob = [
+						{
+							raceName : "Chug Plate",
+							raceNo : 1,
+							result : 
+							[
+								{position : 1, horseNo : 5, name : "The Becket", jockey : "Suraj Narredu", trainer : "Padmanabhan",rating : 26},
+								{position : 2, horseNo : 4, name : "Mysticle", jockey : "P.S. Chawhan", trainer : "Ganapathy",rating : 26},
+								{position : 3, horseNo : 8, name : "SherLock Holmes", jockey : "Vasanth Shindey", trainer : "Padmanabhan",rating : 26},
+								{position : 4, horseNo : 1, name : "Amazing", jockey : "Yash Narredu", trainer : "Padmanabhan",rating : 26},
+							]
+						}
+						,
+						{	
+							raceName : "Pall ChampionShip",
+							raceNo : 2,
+							result :
+							[
+								{position : 1, horseNo : 5, name : "The Becket", jockey : "Suraj Narredu", trainer : "Padmanabhan",rating : 26},
+								{position : 2, horseNo : 4, name : "Mysticle", jockey : "P.S. Chawhan", trainer : "Ganapathy",rating : 26},
+								{position : 3, horseNo : 8, name : "SherLock Holmes", jockey : "Vasanth Shindey", trainer : "Padmanabhan",rating : 26},
+								{position : 4, horseNo : 1, name : "Amazing", jockey : "Yash Narredu", trainer : "Padmanabhan",rating : 26},
+							]
+						}
+					]
+	$scope.results = dummyRob;
+	
+})
+
 .controller('HomeCtrl', function($scope) {
 });
