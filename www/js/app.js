@@ -95,6 +95,36 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.eachrace', {
+      url: "/eachrace",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/eachrace.html",
+          controller: 'EachRaceCtrl'
+        }
+      }
+    })
+
+    .state('app.horses', {
+      url: "/horses",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/horses.html",
+          controller: 'HorseCtrl'
+        }
+      }
+    })
+
+    .state('app.jockeys', {
+      url: "/jockeys",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/jockeys.html",
+          controller: 'JockeysCtrl'
+        }
+      }
+    })
+
     .state('app.home', {
       url: "/home",
       views: {

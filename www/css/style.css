@@ -2,6 +2,7 @@
 .put-right{
 	float:right;
 }
+
 .put-left{
 	float:left;
 }
@@ -68,4 +69,32 @@ body
 .white
 {
 	color : white;
+}
+
+.no-deco{
+	text-decoration: none;
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+.jockey-details{
+	float:right;
+}
+
+.row-assertive{
+	background-color:rgb(239, 78, 58);
+	font-weight: bold;
+	color:white;
 }

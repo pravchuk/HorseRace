@@ -1,0 +1,38 @@
+<ion-view title="Suresh Mahindra Trophy">
+  <ion-content class="has-header">
+  	<div class="list card">
+	  <a href="#" class="item item-icon-left">
+	    <i class="icon ion-clock"></i>
+	    5:30 PM
+	  </a>
+	  <a href="#" class="item item-icon-left">
+	    <i class="icon ion-trophy"></i>
+	    1: 3.29L 2: 1.38L 3: 0.75L 4: 0.34L
+	  </a>
+	  <a href="#" class="item item-icon-left">
+	    <i class="icon ion-ios7-paw"></i>
+	    3200 Meters
+	  </a>
+	  <a href="#" class="item item-icon-left">
+	    <i class="icon ion-ribbon-b"></i>
+	    Class I
+	  </a>
+	</div>
+    <ion-list>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-arrow-down-b' : 'ion-arrow-right-b'"></i>
+            &nbsp;
+            {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            {{item}}
+          </ion-item>
+        </div>
+      </ion-list>
+  </ion-content>
+</ion-view>
