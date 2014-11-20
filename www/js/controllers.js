@@ -60,6 +60,7 @@ angular.module('starter.controllers', [])
 						{
 							raceName : "Chug Plate",
 							raceNo : 1,
+							time : "8:00",
 							result : 
 							[
 								{position : 1, horseNo : 5, name : "The Becket", jockey : "Suraj Narredu", trainer : "Padmanabhan",rating : 26},
@@ -79,6 +80,7 @@ angular.module('starter.controllers', [])
 						{	
 							raceName : "Pall ChampionShip",
 							raceNo : 2,
+							time : "9:00",
 							result :
 							[
 								{position : 1, horseNo : 5, name : "The Becket", jockey : "Suraj Narredu", trainer : "Padmanabhan",rating : 26},
@@ -106,38 +108,29 @@ angular.module('starter.controllers', [])
 	$scope.races = dummyRaces;
 })
 
-.controller('RacecardCtrl', function($scope) {
-	var dummyRaceDay = {place : "Bangalore",
-					color : "73, 143, 36",
-					date : "25-01-1994",
-					races : 
-					[
-						{
-							raceName : "Chug Plate",
-							raceNo : 1,
-							card : 
-							[
-								{horseNo : 1, name : "The Becket", jockey : "Suraj Narredu", trainer : "Padmanabhan",rating : 26},
-								{horseNo : 2, name : "Mysticle", jockey : "P.S. Chawhan", trainer : "Ganapathy",rating : 26},
-								{horseNo : 3, name : "SherLock Holmes", jockey : "Vasanth Shindey", trainer : "Padmanabhan",rating : 26},
-								{horseNo : 4, name : "Amazing", jockey : "Yash Narredu", trainer : "Padmanabhan",rating : 26},
-							],
-							
-						}
-						,
-						{	
-							raceName : "Pall ChampionShip",
-							raceNo : 2,
-							card :
-							[
-								{horseNo : 1, name : "The Becket", jockey : "Suraj Narredu", trainer : "Padmanabhan",rating : 26},
-								{horseNo : 2, name : "Mysticle", jockey : "P.S. Chawhan", trainer : "Ganapathy",rating : 26},
-								{horseNo : 3, name : "SherLock Holmes", jockey : "Vasanth Shindey", trainer : "Padmanabhan",rating : 26},
-								{horseNo : 4, name : "Amazing", jockey : "Yash Narredu", trainer : "Padmanabhan",rating : 26},
-							]
-						}
-					]};
-	$scope.raceDay = dummyRaceDay;
+.controller('RacecardCtrl', function($scope,Context,dummy,$http) {
+	
+	
+	var raceId = Context.get("raceId");
+	var raceNo = Context.get("raceNo");
+	//alert(raceId);
+	$scope.raceno = raceNo || 0;
+	// $scope.raceno = 0;
+	
+	$http.get('http://192.168.1.6/horse/raceDay/'+ raceId +'/usrname/pallal.json').success(function(response, status, headers, config) {var scope = $scope; scope.raceDay = response.data;});
+	//$scope.raceDay = dummy.get(raceId);
 })
-.controller('HomeCtrl', function($scope) {
+.controller('HomeCtrl', function($scope,Context,$http) {
+	 
+	
+	//Context.set("raceId",121);
+	$http.get('http://192.168.1.6/horse/recentRaces/usrname/pallal.json').success(function(response, status, headers, config) {var scope = $scope; scope.races = response.data;});
+	$scope.setRaceId  = function(raceId){
+		Context.set("raceId",raceId);
+	};
+	$scope.setRaceNo  = function(raceNo){
+		
+		Context.set("raceNo",raceNo);
+	};
+	//$scope.races = dummyRaces;
 });
