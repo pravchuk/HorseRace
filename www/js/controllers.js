@@ -144,7 +144,44 @@ angular.module('starter.controllers', [])
 })
 
 .controller('HorseCtrl', function($scope) {
-    
+    //DEMO Jockey Data
+    $scope.items = [
+    {name:"A.Sandesh",
+	 wins:34,
+	 twos:21,
+	 threes:18,
+	 fours:15,
+	 tot:120
+	},
+	{name:"Dashrath S",
+	 wins:21,
+	 twos:24,
+	 threes:20,
+	 fours:12,
+	 tot:105
+	},
+	{name:"P.Trevor",
+	 wins:19,
+	 twos:11,
+	 threes:16,
+	 fours:8,
+	 tot:86
+	},
+	{name:"YashNarredu",
+	 wins:18,
+	 twos:15,
+	 threes:13,
+	 fours:6,
+	 tot:85
+	},
+	{name:"S.Zervan",
+	 wins:13,
+	 twos:11,
+	 threes:6,
+	 fours:2,
+	 tot:42
+	}
+    ];
 })
 
 .controller('JockeysCtrl', function($scope) {

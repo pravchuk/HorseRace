@@ -1,15 +1,23 @@
-<ion-view title="Horses">
+<ion-view title="Horses" tabs-style="tabs-icon-top" class="tabs-assertive">
 <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
+  	 <div class="row row-assertive">
+		  <div class="col col-33">Horse</div>
+		  <div class="col">Wins</div>
+		  <div class="col">2nd</div>
+		  <div class="col">3rd</div>
+		  <div class="col">4th</div>
+		  <div class="col">TOT</div>
+	  </div>
   	  <div ng-repeat="item in items" class="row">
 		  <div class="col col-33">{{item.name}}</div>
-		  <div class="col"</div>
-		  <div class="col">21</div>
-		  <div class="col">18</div>
-		  <div class="col">15</div>
-		  <div class="col">120</div>
+		  <div class="col">{{item.wins}}</div>
+		  <div class="col">{{item.twos}}</div>
+		  <div class="col">{{item.threes}}</div>
+		  <div class="col">{{item.fours}}</div>
+		  <div class="col">{{item.tot}}</div>
 	  </div>
   </ion-content>
 </ion-view>
