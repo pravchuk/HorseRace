@@ -51,12 +51,20 @@ body
 	
 }
 
+
+.font-inc{
+	font-size : 30;
+}
+
+
+
 .tb-data
 {
 	font-family : ubuntu;
 	color : grey;
 	font-size : 12px;
 	text-align : center;
+	/* margin : 10px; */
 }
 
 .semi-heading
@@ -70,6 +78,7 @@ body
 {
 	color : white;
 }
+<<<<<<< HEAD
 
 .no-deco{
 	text-decoration: none;
@@ -98,3 +107,52 @@ body
 	font-weight: bold;
 	color:white;
 }
+/* 
+.sl{
+	overflow-y: hidden; 
+	text-indent : nowrap;	
+	max-height : 500px;
+	transition-property: all; 
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1); 
+}
+
+.sl.closed{
+	max-height : 0px;
+} */
+
+
+/* .sl{
+	
+	white-space : nowrap;
+}
+ */.sl{
+	max-height : 1000px;
+	overflow-y : hidden;
+	-webkit-transition:0.5s ease/* cubic-bezier(0, 1, 0.5, 1) */ all;
+	 -moz-transition:0.5s ease all;
+	 -o-transition:0.5s ease all;
+	 transition:0.5s ease all;
+	 
+}
+.sl.ng-hide
+{
+	max-height : 0px;
+}
+
+/* 
+
+.slider {
+	overflow-y: hidden; 
+	min-height : 200px;
+	max-height: 500px; 
+
+	 transition-property: all; 
+	 transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1); 
+} */
+
+/* .slider.closed {
+	max-height: 200px;
+}
+ */

@@ -2,73 +2,18 @@
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
-  <ion-content class="has-header">
+  <ion-content class="has-header" >
     <!-- Content -->
-    <div class="card">
-      <div class="item item-divider item-assertive">
-        28th November, 2014
-        <span class="put-right">Bangalore</span>
-      </div>
-      <div class="item item-text-wrap">
-        <ul class="list">
-          <li class="item assertive">
-              Into the blue
-              <span class="item-note">
-                10:30 am
-              </span>
-          </li>
-          <li class="item assertive">
-            Red Riding Hood
-            <span class="item-note">
-              11:30 am
-            </span>
-          </li>
-          <li class="item assertive">
-            Carpe Diem
-            <span class="item-note">
-              12:30 pm
-            </span>
-          </li>
-          <li class="item assertive">
-            Magicial Valley
-            <span class="item-note">
-              1:30 pm
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div class="item item-divider item-assertive">
-        29th November, 2014
-        <span class="put-right">Mysore</span>
-      </div>
-      <div class="item item-text-wrap">
-        <ul class="list">
-          <li class="item assertive">
-            Into the blue
-            <span class="item-note">
-              10:30 am
-            </span>
-          </li>
-          <li class="item assertive">
-            Red Riding Hood
-            <span class="item-note">
-              11:30 am
-            </span>
-          </li>
-          <li class="item assertive">
-            Carpe Diem
-            <span class="item-note">
-              12:30 pm
-            </span>
-          </li>
-          <li class="item assertive">
-            Magicial Valley
-            <span class="item-note">
-              1:30 pm
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <a href="#/app/racecard?raceId=raceID" ng-click = "setRaceId('{{i.id}}')" style="text-decoration:none" ng-repeat="i in races">
+	<div  class = "card pad-med" style="background-color:rgba({{i.color}},0.85);margin-bottom:-4px;">		<!--Heading--> <!-- 73, 143, 36 -->
+		<span class = "semi-heading white">{{i.place}}</span>
+		<br/>
+		<span class="put-right date">{{i.date}}</span>
+	</div>
+	<div class="button-bar" style="margin:2%;width : 96%; margin-top:0px; z-index=-1;">
+	<span class="button button-small " style="border:solid 2px white;border-top:none;background-color:rgba({{i.color}},0.85);color : white;" ng-repeat="j in i.races" ng-click="setRaceNo({{j-1}})">{{j}}</span>
+	</div>
+	</a>
+	
   </ion-content>
 </ion-view>
